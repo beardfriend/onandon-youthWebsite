@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'NanumSquareB';
+  src: url(assets/fonts/NanumSquareB.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NanumSquareEB';
+  src: url(assets/fonts/NanumSquareEB.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NanumSquareL';
+  src: url(assets/fonts/NanumSquareL.otf) format('opentype');
+}
+
+* {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: 'NanumSquareEB';
+  font-size: 2rem;
+}
+html {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 1080px;
+  font-family: 'NanumSquareL', sans-serif;
+}
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: black;
+}
