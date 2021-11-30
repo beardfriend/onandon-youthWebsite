@@ -8,7 +8,7 @@ import leftArrow from '../../assets/arrow/leftArrow.png';
 import { Link } from 'react-router-dom';
 
 function PrevArrow(props: any) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <img
       style={{ width: '50px', height: '50px' }}
@@ -21,7 +21,7 @@ function PrevArrow(props: any) {
 }
 
 function NextArrow(props: any) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <img
       style={{ width: '50px', height: '50px' }}
