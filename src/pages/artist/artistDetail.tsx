@@ -25,10 +25,10 @@ const ArtistDetail = () => {
         </TitleBox>
         <MusicianWrapper>
           <ImageBox>
-            <img src={ryu1} style={{ height: '480px' }} alt='gun1' />
+            <img src={ryu1} style={{ height: '580px' }} alt='gun1' />
             <ImageColumnBox>
-              <img style={{ height: '240px' }} src={ryu2} alt='gun2' />
-              <img src={ryu3} style={{ height: '240px' }} alt='gun3' />
+              <img style={{ height: '290px' }} src={ryu2} alt='gun2' />
+              <img src={ryu3} style={{ height: '290px' }} alt='gun3' />
             </ImageColumnBox>
           </ImageBox>
           <DescriptionBox>
@@ -119,10 +119,10 @@ const ArtistDetail = () => {
         </TitleBox>
         <MusicianWrapper>
           <ImageBox>
-            <img src={firstImage} style={{ height: '480px' }} alt='gun1' />
+            <img src={firstImage} style={{ height: '580px' }} alt='gun1' />
             <ImageColumnBox>
-              <img style={{ height: '240px' }} src={secondImage} alt='gun2' />
-              <img src={thirdImage} style={{ height: '240px' }} alt='gun3' />
+              <img style={{ height: '290px' }} src={secondImage} alt='gun2' />
+              <img src={thirdImage} style={{ height: '290px' }} alt='gun3' />
             </ImageColumnBox>
           </ImageBox>
           <DescriptionBox>
@@ -199,7 +199,7 @@ const ImageBox = styled.div`
   position: relative;
   padding: 1rem;
   width: 100%;
-  height: 500px;
+  height: 600px;
 
   img {
     width: 100%;

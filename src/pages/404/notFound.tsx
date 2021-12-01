@@ -12,7 +12,14 @@ const NotFound = () => {
           죄송합니다 해당 서비스는 <br />
           개발 진행 중입니다.
         </h1>
-        <div style={{ display: 'flex', gap: '5rem' }}>
+        <div
+          style={{
+            display: 'flex',
+            gap: '5rem',
+            position: 'relative',
+            top: '100px'
+          }}
+        >
           <Button onClick={() => navigate('/')}>홈화면으로 돌아가기</Button>
           <Button onClick={() => navigate(-1)}>이전 화면으로 돌아가기</Button>
         </div>
@@ -25,8 +32,8 @@ export default NotFound;
 
 const Main = styled.main`
   display: flex;
-  gap: 10rem;
   position: relative;
+  gap: 10rem;
   z-index: 1;
   flex-direction: column;
   align-items: center;
