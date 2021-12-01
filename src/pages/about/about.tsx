@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import AboutCard from '../../components/card/aboutCard';
 import Footer from '../../containers/footer/footer';
 import Header from '../../containers/header/header';
-import luxlego from '../../assets/company/luxlego.jpg';
-import onandon from '../../assets/company/onandon.png';
+import AboutLuxLego from '../../assets/company/about_luxlego.png';
 
 const About = () => {
   return (
@@ -32,16 +30,33 @@ const About = () => {
               <p>우리들의 모든 것을 스트리밍하다</p>
             </TextBox>
             <DescriptionBox>
-              <h1>설명 및 비전</h1>
+              <h1>
+                "지역, 인디 아티스트와 작품들을 중심으로 구축한 플랫폼"
+                <br />
+                <br />
+                <br />
+                인디스트림이 여러분과 함께 성장하기 위해 물길을 텄습니다.
+                <br />
+                <br />
+                우리 같이 씬을 만들어봐요
+              </h1>
+              <button>회사 포트폴리오 보러 가기</button>
             </DescriptionBox>
           </BannerSecondWrapper>
         </AboutBannerContainer>
-        <AboutCardContainer>
-          <AboutCard title='정글메이커(럭스레고)' logoUrl={luxlego} />
-          <AboutCard title='온앤온 협동조합' logoUrl={onandon} />
-          <AboutCard title='그려' />
-          <AboutCard title='와트' />
-        </AboutCardContainer>
+        <CompanyContainer>
+          <CompanyLogoWrapper>
+            <img src={AboutLuxLego} alt='luxlego' />
+            <h1>지역 인디 문화의 씬을 만듭니다</h1>
+          </CompanyLogoWrapper>
+          <CompanyDesWrapper>
+            <h1>Luxlego ( Lux + Lego )</h1>
+            <h1>
+              개개인이 갖고 있는 재능과 끼를 빛에 비유하여
+              <br />그 빛들을 모아 더 큰 빛이 되자는 의미로 만들어진 이름입니다.
+            </h1>
+          </CompanyDesWrapper>
+        </CompanyContainer>
       </Main>
       <Footer />
     </>
@@ -54,7 +69,7 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
+
   padding: 0 5rem 20rem 5rem;
 `;
 
@@ -102,12 +117,51 @@ const DescriptionBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  button {
+    width: 20rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: #e45e24;
+    color: white;
+  }
 `;
 
-const AboutCardContainer = styled.div`
-  display: flex;
-  gap: 3rem;
-  padding: 2rem 0;
+const CompanyContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5rem 0;
   margin-top: 4rem;
   border-top: 1px solid gray;
+`;
+
+const CompanyLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  img {
+    max-width: 45rem;
+  }
+`;
+
+const CompanyDesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  h1 {
+    &:first-child {
+      font-size: 5rem;
+    }
+    &:last-child {
+      margin-top: 5rem;
+    }
+  }
 `;

@@ -15,6 +15,8 @@ const Slider = () => {
     speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
     nextArrow: <EmptyArrow />,
     prevArrow: <EmptyArrow />
   };
@@ -29,12 +31,20 @@ const Slider = () => {
         style={{ border: '20px' }}
       ></iframe>
       <iframe
-        width='1118'
+        width='1280'
         height='600'
-        src='https://www.youtube.com/embed/XZ4UK31FpRw?list=RDXZ4UK31FpRw'
+        src='https://www.youtube.com/embed/OK_66pFwJRY'
         title='YouTube video player'
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-        allowFullScreen
+        style={{ border: '20px' }}
+      ></iframe>
+      <iframe
+        width='1280'
+        height='600'
+        src='https://www.youtube.com/embed/6JFRQjpsG2E'
+        title='YouTube video player'
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+        style={{ border: '20px' }}
       ></iframe>
     </SliderWrapper>
   );

@@ -23,6 +23,9 @@ h1 {
   font-family: 'NanumSquareEB';
   font-size: 2rem;
 }
+h2 {
+  font-family: 'NanumSquareEB';
+}
 html {
   position: relative;
   margin: 0;

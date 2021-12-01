@@ -1,15 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import ParkTeaMin from '../../assets/home/ParkTeaMin.jpg';
 import { Link } from 'react-router-dom';
 
 interface MainCardType {
-  type: string;
+  type: 'artist' | 'main';
   url?: string | undefined;
   title: string;
   src: string;
   description: string;
   artistNo: number;
+}
+
+interface Props {
+  readonly type?: string;
 }
 
 const MainCard = ({
@@ -27,7 +31,9 @@ const MainCard = ({
       </div>
       <ImageBox>
         <Image src={src} alt={title} loading='lazy' />
-        <ImageDescription>{description}</ImageDescription>
+        <ImageDescription type={type}>
+          {type === 'artist' ? <strong>{description}</strong> : description}
+        </ImageDescription>
       </ImageBox>
       <MoreDetail
         to={
@@ -67,11 +73,7 @@ const Title = styled.h1`
   font-family: 'NanumSquareEB';
 `;
 const ImageBox = styled.div`
-  display: flex;
   position: relative;
-  flex-direction: column;
-  align-items: center;
-
   height: 180px;
   margin-top: 3rem;
   padding: 0 5rem;
@@ -79,15 +81,25 @@ const ImageBox = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  max-height: 100%;
+  max-height: 150px;
 `;
 
-const ImageDescription = styled.p`
-  position: absolute;
-  bottom: -20px;
-  left: 50px;
+const ImageDescription = styled.p<Props>`
+  margin-top: 2rem;
   width: 100%;
   font-size: 1.2rem;
+  ${({ type }) => {
+    if (type === 'artist') {
+      return css`
+        text-align: center;
+      `;
+    }
+  }}
+  strong {
+    font-weight: bold;
+    font-size: 15px;
+    left: 50px;
+  }
 `;
 
 const MoreDetail = styled(Link)`

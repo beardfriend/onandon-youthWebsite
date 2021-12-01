@@ -33,7 +33,7 @@ function NextArrow(props: any) {
   );
 }
 
-const ArtistSlider = ({ data }: any) => {
+const ArtistSlider = ({ data, setState }: any) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -47,8 +47,12 @@ const ArtistSlider = ({ data }: any) => {
     <SliderWrapper {...settings}>
       {data.map((datas: any) => {
         return (
-          <Link to={`/artists/${datas.link}`}>
-            <SilderContentWrapper imageUrl={datas.imageUrl} key={datas.index}>
+          <Link
+            to={`/artists/${datas.link}`}
+            onClick={() => setState(datas.link)}
+            key={datas.index}
+          >
+            <SilderContentWrapper imageUrl={datas.imageUrl}>
               <div className='nameBox'>
                 <h1>{datas.name}</h1>
               </div>

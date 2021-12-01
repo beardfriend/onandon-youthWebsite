@@ -15,10 +15,11 @@ const Home = () => {
         <CardContainer>
           <CardWrapper>
             {mainData.map((datas) => {
-              const { index, type, url, src, title } = datas;
+              const { index, type, url, src, title, description } = datas;
               return (
                 <MainCard
                   key={index}
+                  description={description}
                   title={title}
                   type={type}
                   url={url}
@@ -33,10 +34,11 @@ const Home = () => {
           <Title>ARTISTS</Title>
           <ArtistWrapper>
             {artistData.map((datas) => {
-              const { index, type, artistNo, src, title } = datas;
+              const { index, type, artistNo, src, title, description } = datas;
               return (
                 <MainCard
                   key={index}
+                  description={description}
                   artistNo={artistNo}
                   title={title}
                   type={type}
@@ -65,20 +67,25 @@ const CardContainer = styled.div``;
 
 const CardWrapper = styled.div`
   display: flex;
+  justify-content: center;
   gap: 5rem;
   margin-top: 5rem;
 `;
 
 const ArtistContainer = styled.div`
   display: flex;
+
   flex-direction: column;
   gap: 1rem;
   margin-top: 5rem;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  text-align: center;
+`;
 
 const ArtistWrapper = styled.div`
   display: flex;
+  justify-content: center;
   gap: 5rem;
 `;
